@@ -188,6 +188,9 @@
             pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
             if (highquality) {
                 pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
+            } else {
+                // Force lower (medium) quality if highquality is set to false
+                pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium
             }
             if (frontcamera) {
                 pickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
